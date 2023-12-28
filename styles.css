@@ -232,17 +232,27 @@ button{
     margin: auto;
 }
 
-.three .three-content .three-text ul{
-    padding: 0 1rem;
+.three .three-content .three-text .three-cards{
+    display: grid;
+    grid-template-columns: 31% 31% 31%;
+    gap: 3%;
 }
 
-.three .three-content .three-text ul li{
-    list-style: disc;
-    padding-bottom: 1rem;
+.three .three-content .three-text .three-cards .card{
+    display: block;
+    border: 3px solid #006838;
+    border-radius: 35px;
+    padding: 1.5rem;
 }
 
-.three .three-content .three-text ul li span{
-    font-weight: bold;
+.three .three-content .three-text .three-cards .card img{
+    margin: auto;
+    display: block;
+}
+
+.three .three-content .three-text .three-cards .card h3{
+    text-align: center;
+    padding: 2rem 0 1rem 0;
 }
 
 .three .three-content .three-text h2{
@@ -265,7 +275,7 @@ button{
 }
 
 .wrapper {
-  max-width: 1280px;
+  max-width: 1600px;
   width: 100%;
   position: relative;
   margin: auto;
@@ -326,7 +336,7 @@ button{
 
 .wrapper .carousel .card {
   scroll-snap-align: start;
-  height: 342px;
+  height: 500px;
   background: #fff;
   border-radius: 8px;
   padding-bottom: 15px;
@@ -391,7 +401,7 @@ button{
     background-repeat: no-repeat;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .wrapper .carousel {
     grid-auto-columns: calc((100% / 2) - 9px);
   }
@@ -400,6 +410,10 @@ button{
 @media (max-width: 600px) {
   .wrapper .carousel {
     grid-auto-columns: 100%;
+  }
+
+  .wrapper .carousel .card{
+    height: 400px;
   }
 }
 
@@ -638,6 +652,24 @@ footer img{
 
 }
 
+@media screen and (max-width: 1023px) and (min-width: 600px){
+    .three .three-content .three-text .three-cards{
+        grid-template-columns: 50% 49%;
+        margin: auto;
+        grid-gap: 1%;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .three .three-content .three-text .three-cards{
+        display: block;
+    }
+
+    .three .three-content .three-text .three-cards .card{
+        margin-bottom: 2rem;
+    }
+}
+
 @media only screen and (max-width: 480px){
     
     .fourth .fourth-content {
@@ -654,6 +686,7 @@ footer img{
         height: 100%;
         border-radius: 45px;
     }
+
 }
 
 @media only screen and (min-width: 1440px){
