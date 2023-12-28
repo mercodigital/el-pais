@@ -228,14 +228,29 @@ button{
 }
 
 .three .three-content .three-text{
-    text-align: center;
     padding: 3rem 0 4rem 0;
-    width: 50%;
     margin: auto;
+}
+
+.three .three-content .three-text ul{
+    padding: 0 1rem;
+}
+
+.three .three-content .three-text ul li{
+    list-style: disc;
+    padding-bottom: 1rem;
+}
+
+.three .three-content .three-text ul li span{
+    font-weight: bold;
 }
 
 .three .three-content .three-text h2{
     font-size: 4rem;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 2rem;
 }
 
 .three .three-content .three-text h2 span{
@@ -576,7 +591,8 @@ footer img{
 
     .three .three-content .three-text h2{
         font-size: 2.5rem;
-        padding-bottom: 2rem;
+        padding-bottom: 0rem;
+        width: 100%;
     }
 
     .fourth .fourth-content {
