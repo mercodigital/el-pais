@@ -231,17 +231,295 @@ button{
     margin: auto;
 }
 
+.three .three-content .three-text .semillas,
+.three .three-content .three-text .fertilizantes{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.three .three-content .three-text .semillas .semillas-text,
+.three .three-content .three-text .fertilizantes .fertilizantes-text{
+    width: 50%;
+}
+
+.three .three-content .three-text .semillas .semillas-text h3,
+.three .three-content .three-text .fertilizantes .fertilizantes-text h3{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.three .three-content .three-text .semillas .semillas-text p{
+    padding-right: 3rem;
+}
+
+.three .three-content .three-text .semillas img,
+.three .three-content .three-text .fertilizantes img{
+    width: 50%;
+    border-radius: 20px;
+    max-width: 650px;
+}
+
+.three .three-content .three-text .fertilizantes{
+    margin: 5rem 0 5rem 0;
+}
+
+.three .three-content .three-text .fertilizantes .fertilizantes-text{
+    padding-left: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.container .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: 25%;
+  max-width: 80%;
+  padding: 2em 0;
+  background: white;
+  box-shadow: 0 0 6px 0 rgba(32, 32, 36, 0.12); 
+  /* border: .5px solid black; */
+  transition: all 0.35s ease;
+  margin: 0 1rem;
+}
+
+.container .card::before,
+.container .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #006838;
+  height: 4px;
+}
+
+.container .card::before {
+  width: 0;
+  opacity: 0;
+  transition: opacity 0 ease, width 0 ease;
+  transition-delay: 0.5s;
+}
+
+.container .card::after {
+  width: 100%;
+  background: white;
+  transition: width 0.5s ease;
+}
+
+.container .card .content {
+  /* width: 18em;
+  max-width: 80%; */
+  padding: 0 1.5rem;
+}
+
+.container .card .logo {
+  /* margin: 0 0 1em; */
+  width: 100px;
+  transition: all 0.35s ease;
+  margin: auto;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+.container .card h3 {
+  color: #363636;
+  text-align: center;
+  margin: 0;
+}
+
+.container .card .hover_content {
+  overflow: hidden;
+  max-height: 0;
+  transform: translateY(1em); 
+  transition: all 0.55s ease;
+}
+
+.container .card .hover_content p {
+  margin: 1.5em 0 0;
+  line-height: 1.4em;
+}
+
+.container .card:hover {
+  width: 24em;
+  box-shadow: 0 10px 20px 0 rgba(32, 32, 36, 0.12); 
+}
+
+.container .card:hover::before {
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease, width 0.5s ease;
+  transition-delay: 0;
+}
+
+.container .card:hover::after {
+  width: 0;
+  opacity: 0;
+  transition: width 0 ease;
+}
+
+.container .card:hover .logo {
+  margin-bottom: 1.5em;
+}
+
+.container .card:hover .hover_content {
+  max-height: fit-content;
+  transform: none;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .three .three-content .three-text .three-cards{
     display: grid;
-    grid-template-columns: 31% 31% 31%;
-    gap: 3%;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 
 .three .three-content .three-text .three-cards .card{
     display: block;
     border: 3px solid #006838;
     border-radius: 35px;
-    padding: 1.5rem;
+    padding: 1rem;
+    height: fit-content;
 }
 
 .three .three-content .three-text .three-cards .card img{
@@ -259,7 +537,7 @@ button{
     text-align: center;
     width: 50%;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 
 .three .three-content .three-text h2 span{
@@ -603,10 +881,63 @@ footer img{
     }
 
     .three .three-content .three-text h2{
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         padding-bottom: 0rem;
         width: 100%;
+        margin-bottom: 3rem;
     }
+
+    .three .three-content .three-text .semillas .semillas-text, 
+    .three .three-content .three-text .fertilizantes .fertilizantes-text {
+        width: 100%;
+    }
+
+
+
+
+    .three .three-content .three-text .semillas{
+        flex-direction: column;
+    }
+
+    .three .three-content .three-text .fertilizantes{
+        flex-direction: column-reverse;
+        margin: 3rem 0 1rem 0;
+    }
+
+    .three .three-content .three-text .semillas img,
+    .three .three-content .three-text .fertilizantes img{
+        width: 100%;
+        margin-top: 2rem
+    }
+
+    .three .three-content .three-text .semillas .semillas-text p{
+        padding-right: 0rem;
+    }
+
+    .three .three-content .three-text .fertilizantes .fertilizantes-text{
+        padding-left: 0rem;
+    }
+
+    /* .container{
+        flex-direction: column;
+    }
+
+    .container .card{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .container .card:hover{
+        width: 100%;
+    } */
+
+
+
+
+
+
+
+
 
     .fourth .fourth-content {
         margin-top: 13rem;
@@ -657,6 +988,22 @@ footer img{
         margin: auto;
         grid-gap: 1%;
     }
+
+     .container{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin: auto;
+        grid-gap: 1%;
+    }
+
+    .container .card{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .container .card:hover{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 599px) {
@@ -667,9 +1014,32 @@ footer img{
     .three .three-content .three-text .three-cards .card{
         margin-bottom: 2rem;
     }
+
+    .container{
+        display: block;
+    }
+
+    .container .card{
+        width: 100%;
+        max-width: none;
+        margin: 2rem 0;
+    }
+
+    .container .card:hover{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 480px){
+
+    .three .three-content .three-text .semillas .semillas-text h3,
+    .three .three-content .three-text .fertilizantes .fertilizantes-text h3{
+        font-size: 2rem;
+    }
+
+    .three .three-content .three-text h2{
+        font-size: 2.5rem;
+    }
     
     .fourth .fourth-content {
         margin-top: 10rem;
