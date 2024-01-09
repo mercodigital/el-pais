@@ -190,20 +190,19 @@ button{
 
 .two .two-content{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     padding: 5rem 0 5rem 0;
 }
 
 .two .two-content img{
-    width: 475px;
-    height: 100%;
+    width: 50%;
     border-radius: 30px;
 }
 
 .two .two-content .two-text{
-    width: 40%;
-    padding-left: 4rem;
+    width: 50%;
+    padding-left: 3.5rem;
 }
 
 .two .two-content .two-text h2{
@@ -231,7 +230,7 @@ button{
     margin: auto;
 }
 
-.three .three-content .three-text .semillas,
+.three .three-content .three-text .semillas .semillas-content-1,
 .three .three-content .three-text .fertilizantes{
     display: flex;
     align-items: center;
@@ -258,6 +257,32 @@ button{
     width: 50%;
     border-radius: 20px;
     max-width: 650px;
+}
+
+.three .three-content .three-text .semillas .semillas-content-2{
+    display: flex;
+    margin-top: 3rem;
+}
+
+ .three .three-content .three-text .semillas .semillas-content-2 .card{
+    margin: 0 .5rem;
+} 
+
+.three .three-content .three-text .semillas .semillas-content-2 .card img{
+    border-radius: 0;
+    width: 100%;
+    display: block;
+}
+
+.three .three-content .three-text .semillas .semillas-content-2 .card .card-container{
+    padding: 2rem 1rem;
+    background: #006838;
+    color: white;
+}
+
+.three .three-content .three-text .semillas .semillas-content-2 .card .card-container h4{
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .three .three-content .three-text .fertilizantes{
@@ -855,7 +880,7 @@ footer img{
     }
 
     .two .two-content img{
-        width: 80%;
+        width: 100%;
         height: 100%;
         border-radius: 30px;
     }
@@ -895,8 +920,13 @@ footer img{
 
 
 
-    .three .three-content .three-text .semillas{
+    .three .three-content .three-text .semillas .semillas-content-1{
         flex-direction: column;
+    }
+
+    .three .three-content .three-text .semillas .semillas-content-2{
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
 
     .three .three-content .three-text .fertilizantes{
@@ -1039,6 +1069,10 @@ footer img{
 
     .three .three-content .three-text h2{
         font-size: 2.5rem;
+    }
+
+    .three .three-content .three-text .semillas .semillas-content-2{
+        display: block;
     }
     
     .fourth .fourth-content {
