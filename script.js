@@ -129,3 +129,17 @@ btnVolverArriba.onclick = function() {
     document.body.scrollTop = 0; 
     document.documentElement.scrollTop = 0; 
 };
+
+                                            /* CALL TO ACTION */
+
+var cta = document.querySelectorAll('.cta');
+
+cta.forEach(function(boton) {
+  boton.addEventListener('click', function() {
+    var targetElement = document.getElementById('contacto');
+                                                
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
