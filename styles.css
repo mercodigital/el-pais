@@ -230,14 +230,19 @@ button{
     margin: auto;
 }
 
-.three .three-content .three-text .semillas .semillas-content-1,
 .three .three-content .three-text .fertilizantes{
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.three .three-content .three-text .semillas .semillas-text,
+.three .three-content .three-text .semillas .semillas-content-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.three .three-content .three-text .semillas .semillas-content-1 .semillas-text,
 .three .three-content .three-text .fertilizantes .fertilizantes-text{
     width: 50%;
 }
@@ -248,15 +253,16 @@ button{
     margin-bottom: 1rem;
 }
 
-.three .three-content .three-text .semillas .semillas-text p{
+.three .three-content .three-text .semillas .semillas-content-1 .semillas-text p{
     padding-right: 3rem;
 }
 
-.three .three-content .three-text .semillas img,
+.three .three-content .three-text .semillas .semillas-content-1 img,
 .three .three-content .three-text .fertilizantes img{
     width: 50%;
     border-radius: 20px;
-    max-width: 650px;
+    max-width: 450px;
+    margin: auto;
 }
 
 .three .three-content .three-text .semillas .semillas-content-2{
@@ -799,6 +805,12 @@ footer{
     padding: 5rem 7% 3rem 7%;
 }
 
+footer .footer-ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 footer div{
     width: 30%;
 }
@@ -912,7 +924,7 @@ footer img{
         margin-bottom: 3rem;
     }
 
-    .three .three-content .three-text .semillas .semillas-text, 
+    .three .three-content .three-text .semillas .semillas-content-1 .semillas-text, 
     .three .three-content .three-text .fertilizantes .fertilizantes-text {
         width: 100%;
     }
@@ -929,15 +941,30 @@ footer img{
         grid-template-columns: 50% 50%;
     }
 
+    .three .three-content .three-text .semillas .semillas-content-2 .card{
+        margin-top: 1rem;
+    }
+
+    .three .three-content .three-text .semillas .semillas-content-2 .card:last-of-type{
+        grid-column: 1 / -1; 
+        justify-self: center;
+        max-width: 415px;
+    }
+
     .three .three-content .three-text .fertilizantes{
         flex-direction: column-reverse;
         margin: 3rem 0 1rem 0;
     }
 
-    .three .three-content .three-text .semillas img,
+    .three .three-content .three-text .semillas .semillas-content-1 img{
+        width: 100%;
+        margin-top: 2.5rem;
+    }
+
     .three .three-content .three-text .fertilizantes img{
         width: 100%;
-        margin-top: 2rem
+        margin-top: 2.5rem;
+        max-width: none;
     }
 
     .three .three-content .three-text .semillas .semillas-text p{
@@ -1003,11 +1030,23 @@ footer img{
     footer{
         display: block;
         padding: 3rem 7% 3rem 7%;
+    } 
+
+    footer .footer-ul{
+        margin-bottom: 3rem;
     }
 
-    footer div{
-        width: 85%;
+    footer div, footer img{
+        width: fit-content;
         margin-bottom: 3rem;
+        margin: auto;
+        /* font-size: 2rem; */
+    }
+
+    footer img{
+        display: block;
+        width: 90%;
+        max-width: 385px;
     }
 
 }
@@ -1057,6 +1096,14 @@ footer img{
 
     .container .card:hover{
         width: 100%;
+    }
+
+    footer .footer-ul{
+        display: block;
+    }
+
+    footer div, footer img{
+        font-size: 1.3rem;
     }
 }
 
