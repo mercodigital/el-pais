@@ -860,8 +860,12 @@ footer{
 
 footer .footer-ul{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
     width: 100%;
+}
+
+footer .footer-ul div:last-of-type{
+    margin: auto;
 }
 
 footer div{
