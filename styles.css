@@ -236,6 +236,59 @@ button{
     justify-content: space-around;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.three .three-content .three-text .semillas .semillas1 {
+    background-image: url(images/semillas_fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    margin-left: calc(-7vw);
+    margin-right: calc(-7vw);
+    min-height: 50vh;
+    color: white;
+    padding: 5% 0;
+}
+
+.three .three-content .three-text .semillas .semillas1 h3{
+    font-size: 5rem;
+    text-align: center;
+}
+
+.three .three-content .three-text .semillas .semillas1 p{
+    text-align: center;
+    padding: 0 15%;
+    margin-top: 5%;
+    padding-bottom: 2rem;
+    font-size: 1.5rem
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .three .three-content .three-text .semillas .semillas-content-1{
     display: flex;
     align-items: center;
@@ -261,7 +314,7 @@ button{
 .three .three-content .three-text .fertilizantes img{
     width: 50%;
     border-radius: 20px;
-    max-width: 450px;
+    max-width: 700px;
     margin: auto;
 }
 
@@ -929,8 +982,9 @@ footer img{
         width: 100%;
     }
 
-
-
+    .three .three-content .three-text .semillas .semillas-content-1 .semillas-text p{
+        padding-right: 0;
+    }
 
     .three .three-content .three-text .semillas .semillas-content-1{
         flex-direction: column;
@@ -1117,6 +1171,50 @@ footer img{
     .three .three-content .three-text h2{
         font-size: 2.5rem;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .three .three-content .three-text .semillas .semillas1 h3{
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    .three .three-content .three-text .semillas .semillas1 p{
+        text-align: center;
+        padding: 0 1rem;
+        padding-right: 2rem;
+        margin-top: 5%;
+        padding-bottom: 2rem;
+        font-size: 1.2rem
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .three .three-content .three-text .semillas .semillas-content-2{
         display: block;
