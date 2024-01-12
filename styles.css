@@ -484,7 +484,7 @@ button{
   cursor: pointer;
   width: 25%;
   max-width: 80%;
-  padding: 2em 0;
+  padding-bottom: 2em;
   background: white;
   box-shadow: 0 0 6px 0 rgba(32, 32, 36, 0.12); 
   /* border: .5px solid black; */
@@ -503,6 +503,7 @@ button{
 
 .container .container-cards-2 .card{
     width: 49%;
+    padding-top: 2em;
 }
 
 .container .card::before,
@@ -529,12 +530,20 @@ button{
   transition: width 0.5s ease;
 }
 
-.container .card .content, .container .card #tratamiento p, .container .card #tratamiento h3
+.container .container-cards-1 .card .content p, .container .container-cards-1 .card .content h3
 {
-  /* width: 18em;
-  max-width: 80%; */
-  padding: 0 1.5rem;
+    padding: 0 1.5rem;
 }
+
+.container .container-cards-1 .card .content img{
+    width: 100%;
+}
+
+.container .container-cards-2 .card .content{
+    /* width: 18em;
+    max-width: 80%; */
+    padding: 0 1.5rem; 
+  }
 
 .container .card .logo {
   /* margin: 0 0 1em; */
@@ -543,14 +552,6 @@ button{
   margin: auto;
   margin-bottom: 3rem;
   display: block;
-}
-
-.container .card #tratamiento{
-    padding: 0 0;
-}
-
-.container .card #tratamiento .logo{
-    width: 100%;
 }
 
 .container .card h3 {
