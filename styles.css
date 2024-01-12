@@ -529,7 +529,8 @@ button{
   transition: width 0.5s ease;
 }
 
-.container .card .content {
+.container .card .content, .container .card #tratamiento p, .container .card #tratamiento h3
+{
   /* width: 18em;
   max-width: 80%; */
   padding: 0 1.5rem;
@@ -542,6 +543,14 @@ button{
   margin: auto;
   margin-bottom: 3rem;
   display: block;
+}
+
+.container .card #tratamiento{
+    padding: 0 0;
+}
+
+.container .card #tratamiento .logo{
+    width: 100%;
 }
 
 .container .card h3 {
