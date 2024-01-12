@@ -374,7 +374,7 @@ button{
 
 
 .three .three-content .three-text .fertilizantes .fertilizantes-content{
-    background-image: url(images/fertilizantes_fondo.jpg);
+    background-image: url(images/fertilizantes_fondo2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -808,24 +808,45 @@ button{
   font-size: 1.31rem;
 }
 
-#card-1, #card-4{
+#card-1, #card-7{
     background-image: url(images/productos_01.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-#card-2, #card-5{
+#card-2, #card-8{
     background-image: url(images/productos_02.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-#card-3, #card-6{
+#card-3, #card-9{
     background-image: url(images/productos_03.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+}
+
+#card-4, #card-10{
+    background-image: url(images/DSC_8084.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#card-5, #card-11{
+    background-image: url(images/DSC_8132.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#card-6, #card-12{
+    background-image: url(images/DSC_8212.jpg);
+    background-size: cover;
+    background-position: left;
     background-repeat: no-repeat;
 }
 
