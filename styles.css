@@ -374,7 +374,7 @@ button{
 
 
 .three .three-content .three-text .fertilizantes .fertilizantes-content{
-    background-image: url(images/fertilizantes_fondo2.jpg);
+    background-image: url(images/fertilizantes_fondo3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1365,7 +1365,8 @@ footer img{
     }
 
     .three .three-content .three-text .fertilizantes .fertilizantes-content h3{
-        font-size: 2.3rem
+        font-size: 2.3rem;
+        padding-left: 1rem;
     }
     
     .fourth .fourth-content {
