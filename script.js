@@ -146,68 +146,57 @@ cta.forEach(function(boton) {
 
                                            /* MODAL DE FORMULARIO */
 
-document.addEventListener('DOMContentLoaded', function () {
-var form = document.getElementById('myForm');
-var modal = document.getElementById('modal-1');
-var closeButton = document.getElementById('md-close');
+                                           document.addEventListener('DOMContentLoaded', function () {
+                                            var form = document.getElementById('myForm');
+                                            var modal = document.getElementById('modal-1');
+                                            var closeButton = document.getElementById('md-close');
                                         
                                             // Function to show the modal with effect
-function showModal() {
-    modal.classList.add('md-show');
-}
+                                            function showModal() {
+                                                modal.classList.add('md-show');
+                                            }
                                         
                                             // Function to hide the modal with effect
-function hideModal() {
-    modal.classList.remove('md-show');
-    form.reset();
-}
+                                            function hideModal() {
+                                                modal.classList.remove('md-show');
+                                                form.reset();
+                                            }
                                         
-                                           
-                                            // form.addEventListener('submit', function (event) {
-                                            //     event.preventDefault(); 
-                                            //     showModal(); 
-                                            // });
-
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); 
-                                                                                      
-  let formData = new FormData(this);
-    fetch('https://agronomiapais.com.ar/mailer/form.php', {
-      method: 'POST',
-      body: formData
-  })
-  .then(response => {
-  if (response.ok) {
-      showModal();
-                                            
-  } else {
-      console.error('Error en la petición');
-    }
-  })
-  .catch(error => {
-      console.error('Error:', error);
-  });});
-
-
-
-
-
-
-
-
-
-
-
+                                            // Add event listener to form submission
+                                            form.addEventListener('submit', function (event) {
+                                                event.preventDefault(); // Prevent form submission
+                                                
+                                                let formData = new FormData(this);
+                                                
+                                                fetch('https://agronomiapais.com.ar/mailer/form.php', {
+                                                    method: 'POST',
+                                                    body: formData
+                                                })
+                                                .then(response => {
+                                                    if (response.ok) {
+                                                        return response.text(); // Parse response as text
+                                                    } else {
+                                                        throw new Error('Error en la petición');
+                                                    }
+                                                })
+                                                .then(data => {
+                                                    showModal(); // Show modal if request is successful
+                                                })
+                                                .catch(error => {
+                                                    console.error('Error:', error);
+                                                });
+                                            });
                                         
                                             // Add event listener to close button
-closeButton.addEventListener('click', function () {
-    hideModal(); // Hide modal when close button is clicked
-});
+                                            closeButton.addEventListener('click', function () {
+                                                hideModal(); // Hide modal when close button is clicked
+                                            });
                                         
                                             // Close modal when clicking on overlay
-modal.addEventListener('click', function (event) {
-    if (event.target === modal) {
-        hideModal();
-    }
-})});
+                                            modal.addEventListener('click', function (event) {
+                                                if (event.target === modal) {
+                                                    hideModal();
+                                                }
+                                            });
+                                        });
                                         
