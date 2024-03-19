@@ -172,7 +172,7 @@ form.addEventListener('submit', function(event) {
   event.preventDefault(); 
                                                                                       
   let formData = new FormData(this);
-    fetch('https://agronomiapais.com.ar/form.php', {
+    fetch('https://agronomiapais.com.ar/mailer/form.php', {
       method: 'POST',
       body: formData
   })
