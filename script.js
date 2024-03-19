@@ -143,3 +143,71 @@ cta.forEach(function(boton) {
     }
   });
 });
+
+                                           /* MODAL DE FORMULARIO */
+
+document.addEventListener('DOMContentLoaded', function () {
+var form = document.getElementById('myForm');
+var modal = document.getElementById('modal-1');
+var closeButton = document.getElementById('md-close');
+                                        
+                                            // Function to show the modal with effect
+function showModal() {
+    modal.classList.add('md-show');
+}
+                                        
+                                            // Function to hide the modal with effect
+function hideModal() {
+    modal.classList.remove('md-show');
+    form.reset();
+}
+                                        
+                                           
+                                            // form.addEventListener('submit', function (event) {
+                                            //     event.preventDefault(); 
+                                            //     showModal(); 
+                                            // });
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); 
+                                                                                      
+  let formData = new FormData(this);
+    fetch('https://agronomiapais.com.ar/form.php', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => {
+  if (response.ok) {
+      showModal();
+                                            
+  } else {
+      console.error('Error en la petición');
+    }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });});
+
+
+
+
+
+
+
+
+
+
+
+                                        
+                                            // Add event listener to close button
+closeButton.addEventListener('click', function () {
+    hideModal(); // Hide modal when close button is clicked
+});
+                                        
+                                            // Close modal when clicking on overlay
+modal.addEventListener('click', function (event) {
+    if (event.target === modal) {
+        hideModal();
+    }
+})});
+                                        

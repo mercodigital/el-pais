@@ -387,10 +387,23 @@
                         <h2>CONTACTANOS</h2>
                         <p>Un representante de la empresa se contactará con usted a la brevedad.</p>
                     </div>
-                    <form>
-                        <input type="text" placeholder="NOMBRE" required>
-                        <input type="number" placeholder="TELÉFONO" required>
-                        <input type="email" placeholder="EMAIL" required>
+
+                    <div class="md-modal md-effect-1" id="modal-1">
+                        <div class="md-content">
+                            <h3>¡Muchas gracias!</h3>
+                            <div>
+                                <p>Un representante de la empresa se contactará con usted a la brevedad.</p>
+                                <button class="md-close" id="md-close">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md-overlay"></div>
+
+                    <iframe id="page" name="page" style="display: none;"></iframe>
+                    <form action="https://agronomiapais.com.ar/form.php" method="post" target="page" id="myForm">
+                        <input type="text" placeholder="NOMBRE" name="nombre" required>
+                        <input type="number" placeholder="TELÉFONO" name="telefono" required>
+                        <input type="email" placeholder="EMAIL" name="correo" required>
                         <input type="submit" value="ENVIAR">
                     </form>
                 </div>
