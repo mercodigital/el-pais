@@ -62,7 +62,6 @@ button{
 }
 
 .nav-link{
-    font-size: 1rem;
     font-weight: bold;
     color: #707070;
 }
@@ -77,13 +76,17 @@ button{
     width: 200px;
 }
 
-#contact-btn, #fcontact-btn{
+#contact-btn, #fcontact-btn, #login-btn{
     background: #006838;
     color: white;
     padding: 1rem 2rem 1rem 2rem;
 }
 
-@media only screen and (max-width: 990px) {
+#login-btn{
+    background: #ff9e00;
+}
+
+@media only screen and (max-width: 1220px) {
 
     .navbar{
         justify-content: space-between;
